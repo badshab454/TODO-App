@@ -18,6 +18,13 @@
     padding: 40px 30px 70px;
     border-radius: 10px;
 }
+h2 {
+    padding: 10px 0;
+}
+.icon {
+    width: 30px;
+    margin-left: 10px;
+}
 .row {
     display: flex;
     align-items: center;
@@ -51,4 +58,25 @@ ul li {
     padding: 12px 8px 12px 50px;
     user-select: none;
     cursor: pointer;
+    position: relative;
+}
+ul li:before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before{
+    background-image: url('images/checked.png');
 }
